@@ -68,5 +68,10 @@ cmp.setup {
         fallback()
       end
     end)
+  },
+  sources = {
+    { name = "luasnip" },
+    { name = "buffer" },
+    { name = "path" },
   }
 }
