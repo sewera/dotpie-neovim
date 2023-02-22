@@ -34,6 +34,7 @@ return packer.startup(function(use)
     requires = { 'nvim-lua/plenary.nvim' }
   }
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'folke/which-key.nvim'
 
   -- Coding tools
   -- Treesitter
@@ -56,14 +57,19 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets"
 
   -- LSP
-  use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
-  use "tamago324/nlsp-settings.nvim"
-  use "jose-elias-alvarez/null-ls.nvim"
+  use {
+    "neovim/nvim-lspconfig",
+    requires = {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'folke/neodev.nvim',
+    },
+  }
 
   -- Utils
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
+  use 'tpope/vim-sleuth'
 
   -- end of plugin list
   if packer_bootstrap then
