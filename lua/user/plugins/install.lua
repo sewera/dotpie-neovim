@@ -15,7 +15,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- UI
-  use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -26,7 +26,7 @@ return packer.startup(function(use)
   }
   use {
     'akinsho/bufferline.nvim',
-    tag = "v2.*",
+    tag = "*",
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use {
